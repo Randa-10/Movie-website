@@ -20,6 +20,8 @@ const Favourite = () => {
 
     return (
         <>
+ <div style={{backgroundColor:'black'}} >
+
         <div className='container'>
                 <Row xs={2} md={3} className="g-4 mt-5 ">
                 {favMovies .length>0? 
@@ -27,14 +29,14 @@ const Favourite = () => {
                     <Col key={movie.id}>
                         <Card  style={{backgroundColor:'black', color:'gray',border:'1px solid gray'}} className='hov'> 
                             <Card.Img variant="top"  
-                         className='img'   src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path } `} height={300} />
+                         className='img'   src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path } `}  />
                             <Card.Body className='single-div' >
                             <span style={{cursor:'pointer'}} >
-                         <FaRegTrashCan size={24}    onClick={()=> handelRemove(movie)} />
+                         <FaRegTrashCan size={24} className='mb-3'    onClick={()=> handelRemove(movie)} />
                         </span>
-                                <Card.Title >{movie.title}</Card.Title>
-                                <Card.Title>Language: {movie.original_language}</Card.Title>
-                                <Card.Title>Date: {movie.release_date}</Card.Title>
+                                <Card.Title  style={{fontSize:'18px',fontStyle:'italic'}}>{movie.title}</Card.Title>
+                                <Card.Title style={{fontSize:'18px',fontStyle:'italic'}} >Language: {movie.original_language}</Card.Title>
+                                <Card.Title style={{fontSize:'18px',fontStyle:'italic'}}>Date: {movie.release_date}</Card.Title>
                                 <button className="btn btn-danger" onClick={()=>{navigate(`/details/${movie.id}`)
                              }} >Details</button>
                                
@@ -44,6 +46,7 @@ const Favourite = () => {
                 ))): ( <p style={{fontStyle:'italic',fontSize:'20px'}} > there is not found favorite movies until now !! </p>)} 
            </Row>
            </div> 
+           </div>
         </>
     );
 }

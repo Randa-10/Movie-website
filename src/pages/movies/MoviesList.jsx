@@ -48,15 +48,18 @@ return (
                         <FaHeart color="red" size={24} onClick={()=> removefav(movie)} />
                             ) : ( <FaRegHeart size={24} onClick={()=> handelAdd(movie)} /> ) }
                     </span>
-                            <Card.Title >{movie.title}</Card.Title>
-                            <Card.Title>Language: {movie.original_language}</Card.Title>
-                            <Card.Title>Date: {movie.release_date}</Card.Title>
-                            <button className="btn btn-danger" onClick={()=>{navigate(`/details/${movie.id}`) }}
+                            <Card.Title style={{fontSize:'18px',fontStyle:'italic'}}  >{movie.title}</Card.Title>
+                            <Card.Title style={{fontSize:'16px',fontStyle:'italic'}}   >Language: {movie.original_language}</Card.Title>
+                            {/* <Card.Title>Date: {movie.release_date}</Card.Title> */}
+
+                            <span> <button className="btn btn-danger "onClick={()=>{navigate(`/details/${movie.id}`) }}
                                 >Details</button>
+                            </span>
                     </Card.Body>
                 </Card>
                 </Col>
-                ))): ( <p>Loading</p>)}
+                
+                ))) : ( <p>Loading</p>)}
             </Row>
             <div className='d-flex justify-content-around mt-3 pb-2'>
                 <button className='btn btn-danger' onClick={()=>{setCurrentPage(currentPage-1);

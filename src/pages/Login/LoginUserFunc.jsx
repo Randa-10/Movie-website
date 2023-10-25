@@ -40,7 +40,7 @@ const LoginUserFunc = () => {
     return (
         <>
         <div className='bacGr' >
-       <div className='container center ' >
+       <div className='container center  mt-5' >
         <form autoComplete="off"onSubmit={(e)=>{handleSubmit(e)}}  className='col-8 container ' >
              <h1 style={{textAlign:'center'}}><FaUserLarge size={"30px"} />login</h1> 
                <div className="mb-3" >
