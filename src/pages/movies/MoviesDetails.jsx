@@ -51,7 +51,7 @@ const loader = useSelector((state) => state.loader.loader)
  
         <Row>
           <Col>
-           <img src={`https://image.tmdb.org/t/p/w500/${movies.backdrop_path }` }  width={400} />
+           <img src={`https://image.tmdb.org/t/p/w500/${movies.backdrop_path }` }  width="100%" />
           </Col>
             <Col>           
             <h1>{movies.title}</h1>   
