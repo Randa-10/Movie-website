@@ -1,0 +1,16 @@
+.bacGr1{
+    height:100vh;
+    background-image:url("https://assets.nflxext.com/ffe/siteui/vlv3/ab180a27-b661-44d7-a6d9-940cb32f2f4a/345ae8b6-2b8b-41cf-b055-244b5980c513/EG-ar-20231009-popsignuptwoweeks-perspective_alpha_website_large.jpg")
+}
+.center1 {
+    border: 5px solid;
+    border:1px solid gray;
+    box-shadow:10px 10px 10px rgb(46, 45, 45) ; 
+    background-color:black;
+   opacity:.9;
+    color: #ffffff;
+
+}
+/* form {
+    opacity: 1;
+   }  */

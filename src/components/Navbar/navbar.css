@@ -1,0 +1,26 @@
+.bg1{
+    background-color: black;
+    border-bottom: gray solid 1px;
+}
+.test{
+    color :rgb(199, 198, 198);
+    text-decoration:none;
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 50px;
+    
+}
+.test:hover{
+    color: #b81818;
+}
+.act{
+    color: #b81818;
+    /* color :rgb(0, 0, 0); */
+    text-decoration:none;
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 50px;
+
+}
