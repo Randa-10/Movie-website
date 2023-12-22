@@ -13,7 +13,7 @@ const Header = () => {
       <>
        <Navbar expand="lg" className="bg1 ">
       <Container>
-        <Navbar.Brand href="#home"><img src={img1} style={{width:'30%'}}/></Navbar.Brand>
+        <Navbar.Brand href="#home"><img src={img1} style={{width:'40%'}}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto ">

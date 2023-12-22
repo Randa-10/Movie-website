@@ -2,35 +2,104 @@
     background-color: gray;
     color: #cecece;
 }
-.img {
-    /* height: 25rem; */
-    /* width: 100%;
-    object-fit: cover; */
+
+.g-4 {
+    margin-top: 20px;
   }
   
-  .hover{
-    background-color: violet;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 100%;
-    border-radius: 10px;
-    text-align: center;
-    padding: 0px 10px;
-    transition: all 1s;
-    color: rgb(32, 32, 32) !important;
-    background-color: rgba(255, 255, 255, 0.76);
-}
-.single-div{
-    position: relative;
-    border-radius: 10px;
-    height: 220px;
-    overflow: hidden;
-    box-shadow: 0 8px 8px rgba(0,0,0,.15)!important;
-}
-
-
- .img{
-    border-radius: 10px;
+  .card {
+    border: 1px solid gray;
+    background-color: black;
+    color: gray;
+    transition: transform 0.3s ease-in-out;
+  }
   
-}
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card .img {
+    max-height: 300px;
+    object-fit: cover;
+  }
+  
+  .card .single-div {
+    padding: 10px;
+  }
+  
+  .card .single-div:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  
+  .card-title.language {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
+  .hov {
+    position: relative;
+  }
+  
+  .FaHeart,
+  .FaRegHeart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .card .btn-details {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .card .btn-details:hover {
+    background-color: #c82333;
+  }
+  
+
+
+.card-container {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border: 1px solid rgb(55, 55, 55);
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  

@@ -9,7 +9,7 @@ import { FaReply } from 'react-icons/fa6';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-
+import StarRating from './StarRating'; 
 const MoviesDetails = () => {
      const {id} = useParams()
      const [movies, setMovies] = useState([])   
@@ -36,6 +36,9 @@ const loader = useSelector((state) => state.loader.loader)
 
   
      },[])
+     if (!movies || !movies.spoken_languages) {
+      return null; 
+    }
   
     return (
         <>
@@ -43,22 +46,27 @@ const loader = useSelector((state) => state.loader.loader)
                 <span className="visually-hidden">Loading...</span>
             </Spinner>: 
 
-   <div style={{backgroundColor:'black',height:'100vh',color:'white'}}>
+   <div style={{backgroundColor:'black',color:'white'}}>
     <div className='pt-5 container  ' >    
      <div className="header">
         <FaReply size={20} onClick={()=>navigate('/')} className='mb-3'/>
       </div>  
- 
-        <Row>
+        <Row  className="card-container">
           <Col>
-           <img src={`https://image.tmdb.org/t/p/w500/${movies.backdrop_path }` }  width="100%" />
+           <img src={`https://image.tmdb.org/t/p/w500/${movies.poster_path }` }  width="100%" />
           </Col>
-            <Col>           
-            <h1>{movies.title}</h1>   
-          <p> Language: {movies.original_language}</p>
-          <p>Date: {movies.release_date} </p> 
-         
-          </Col>
+          <Col >
+      <h1>{movies.title}</h1>
+      <p>original Language: {movies.original_language}</p>
+      <p>Date: {movies.release_date}</p>
+      <p>tagline: {movies.tagline}</p>
+      <p>overview: {movies.overview}</p>
+
+      <p>Language(s): {movies.spoken_languages.map(lang => lang.english_name).join(', ')}</p>
+
+      <p>Vote Average: <StarRating rating={movies.vote_average / 2} /></p>
+      
+    </Col>
         </Row>
         </div>
         </div>
